@@ -1,0 +1,11 @@
+FROM gcc:4.9
+COPY entrypoint1.sh /entrypoint1.sh
+COPY helloworld1.cpp /
+#Add HelloWorld /HelloWorld
+#WORKDIR HelloWorld/
+RUN g++ -o HelloWorld1 helloworld1.cpp
+#WORKDIR /
+#RUN /bin/sh entrypoint1.sh
+#ENTRYPOINT["/entrypoint1.sh"]
+#WORKDIR HelloWorld/
+#CMD ["/bin/sh /entrypoint1.sh"]
